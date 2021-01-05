@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AchieverForm component renders a form.AchieverForm by default 1`] = `
+<form
+  action="#"
+  className="Achiever-form "
+/>
+`;
+
+exports[`AchieverForm component renders the AchieverForm given props 1`] = `
+<form
+  action="#"
+  className="Achiever-form test-class-name"
+  data-other="test-other-prop"
+>
+  <p>
+    test children
+  </p>
+</form>
+`;

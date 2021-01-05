@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AddItemForm component renders the complete form 1`] = `
+<section
+  className="AddGoal"
+>
+  <h2>
+    Create a goal
+  </h2>
+  <AchieverForm>
+    <div
+      className="field"
+    >
+      <label
+        htmlFor="goal-name-input"
+      >
+        Name
+      </label>
+      <input
+        id="goal-name-input"
+        type="text"
+      />
+    </div>
+    <div
+      className="buttons"
+    >
+      <button
+        type="submit"
+      >
+        Add goal
+      </button>
+    </div>
+  </AchieverForm>
+</section>
+`;

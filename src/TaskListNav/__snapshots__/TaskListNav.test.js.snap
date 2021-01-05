@@ -1,0 +1,100 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TaskListNav component renders a .TaskListNav by default 1`] = `
+<div
+  className="TaskListNav"
+>
+  <ul
+    className="TaskListNav__list"
+  />
+  <div
+    className="TaskListNav__button-wrapper"
+  >
+    <NavCircleButton
+      className="TaskListNav__add-goal-button"
+      tag={[Function]}
+      to="/add-goal"
+      type="button"
+    >
+      <FontAwesomeIcon
+        border={false}
+        className=""
+        fixedWidth={false}
+        flip={null}
+        icon="plus"
+        inverse={false}
+        listItem={false}
+        mask={null}
+        pull={null}
+        pulse={false}
+        rotation={null}
+        size={null}
+        spin={false}
+        symbol={false}
+        title=""
+        transform={null}
+      />
+      <br />
+      Goal
+    </NavCircleButton>
+  </div>
+</div>
+`;
+
+exports[`TaskListNav component renders a link in ul for each goal in array 1`] = `
+<ul
+  className="TaskListNav__list"
+>
+  <li
+    key="b0715efe-ffaf-11e8-8eb2-f2801f1b9fd1"
+  >
+    <NavLink
+      activeClassName="active"
+      aria-current="page"
+      className="TaskListNav__goal-link"
+      to="/goal/b0715efe-ffaf-11e8-8eb2-f2801f1b9fd1"
+    >
+      <span
+        className="TaskListNav__num-tasks"
+      >
+        2
+      </span>
+      Important
+    </NavLink>
+  </li>
+  <li
+    key="b07161a6-ffaf-11e8-8eb2-f2801f1b9fd1"
+  >
+    <NavLink
+      activeClassName="active"
+      aria-current="page"
+      className="TaskListNav__goal-link"
+      to="/goal/b07161a6-ffaf-11e8-8eb2-f2801f1b9fd1"
+    >
+      <span
+        className="TaskListNav__num-tasks"
+      >
+        2
+      </span>
+      Super
+    </NavLink>
+  </li>
+  <li
+    key="b07162f0-ffaf-11e8-8eb2-f2801f1b9fd1"
+  >
+    <NavLink
+      activeClassName="active"
+      aria-current="page"
+      className="TaskListNav__goal-link"
+      to="/goal/b07162f0-ffaf-11e8-8eb2-f2801f1b9fd1"
+    >
+      <span
+        className="TaskListNav__num-tasks"
+      >
+        0
+      </span>
+      Spangley
+    </NavLink>
+  </li>
+</ul>
+`;

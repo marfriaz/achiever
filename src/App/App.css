@@ -1,0 +1,78 @@
+.App {
+  --custom-font: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  background: radial-gradient(
+    circle,
+    rgba(67, 69, 92, 1) 0%,
+    rgba(46, 48, 71, 1) 47%,
+    rgba(67, 69, 92, 1) 77%
+  );
+}
+
+.App__header {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: #bdbdbd;
+  font-family: var(--custom-font);
+  padding-top: 32px;
+  text-shadow: 2px 1px 2px black;
+  padding-bottom: 32px;
+}
+
+.Quote h2 {
+  margin-block-start: 0%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.App__main__header {
+  /* background-color: #0b1f3a; */
+  color: #bdbdbd;
+  font-family: var(--custom-font);
+  grid-area: header;
+  padding-left: 16px;
+  padding-top: 32px;
+  text-shadow: 2px 1px 2px black;
+}
+
+.App__body {
+  display: grid;
+  grid-template-areas: "sidebar header" "sidebar main";
+  grid-template-columns: 1fr 2.3fr;
+  grid-template-rows: 120px 1fr;
+  min-height: 100vh;
+}
+
+.App__nav {
+  /* background-color: #0b1b32; */
+  color: #fff;
+  grid-area: sidebar;
+  height: 100vh;
+  overflow: auto;
+}
+
+.App__nav__header {
+  color: #bdbdbd;
+  font-family: var(--custom-font);
+  font-size: 1.3em;
+  grid-area: header;
+  text-align: center;
+  padding-left: 16px;
+  padding-top: 32px;
+  text-shadow: 2px 1px 2px black;
+}
+
+.App__header a,
+.App__main__header a,
+.App__nav__header a {
+  color: #3bba9c;
+}
+
+.App__main {
+  /* background-color: #102541; */
+  grid-area: main;
+  height: calc(100vh - 120px);
+  overflow: auto;
+}

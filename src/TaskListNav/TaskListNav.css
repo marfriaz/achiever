@@ -1,0 +1,44 @@
+.TaskListNav__list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.TaskListNav__button-wrapper {
+  margin: 0 0 0 auto;
+  max-width: 180px;
+}
+
+.TaskListNav__add-goal-button {
+  margin: 20px auto;
+}
+.TaskListNav__add-goal-button:hover {
+  background-color: #29862e;
+  color: white;
+}
+
+.TaskListNav__goal-link {
+  background-color: rgba(112, 119, 147, 0.6);
+  box-shadow: inset 0px 0px 20px 10px rgba(255, 255, 255, 0.1);
+  color: #b5b3b3;
+  display: block;
+  font-family: var(--custom-font);
+  font-size: 20px;
+  margin: 0 0 8px auto;
+  max-width: 180px;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+.TaskListNav__goal-link:hover {
+  color: #3bba9c;
+  cursor: pointer;
+}
+.TaskListNav__goal-link.active {
+  background-color: rgba(112, 119, 147, 0.6);
+}
+
+.TaskListNav__num-tasks {
+  color: #adadad;
+  display: block;
+  float: right;
+  font-size: 10px;
+}
