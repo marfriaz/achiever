@@ -29,6 +29,7 @@ export default function TaskPageMain() {
       <Task
         id={task.id}
         name={task.name}
+        details={task.details}
         modified={task.date_created}
         onDeleteTask={handleDeleteTask}
       />

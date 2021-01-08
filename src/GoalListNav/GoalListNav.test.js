@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 import toJson from "enzyme-to-json";
-import TaskListNav from "./TaskListNav";
+import TaskListNav from "./GoalListNav";
 
 describe(`TaskListNav component`, () => {
   it("renders a .TaskListNav by default", () => {

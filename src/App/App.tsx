@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Route, Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import TaskListNav from "../TaskListNav/TaskListNav";
+import GoalListNav from "../GoalListNav/GoalListNav";
 import TaskPageNav from "../TaskPageNav/TaskPageNav";
 import TaskListMain from "../TaskListMain/TaskListMain";
 import TaskPageMain from "../TaskPageMain/TaskPageMain";
@@ -10,6 +10,8 @@ import AddTask from "../AddTask/AddTask";
 import ApiContext from "../ApiContext";
 import config from "../config";
 import "./App.css";
+
+import CircleButton from "../CircleButton/CircleButton";
 
 export default function App() {
   interface taskInterface {
@@ -92,8 +94,7 @@ export default function App() {
       <div className="App">
         <header className="App__header">
           <h1>
-            <Link to="/">Goal Manager</Link>{" "}
-            <FontAwesomeIcon icon="check-double" />
+            <Link to="/">Achiever</Link> <FontAwesomeIcon icon="check-double" />
           </h1>
           <div className="Quote">
             <h2>
@@ -105,47 +106,40 @@ export default function App() {
           </div>
         </header>
         <div className="App__body">
-          <div className="yo">Yo</div>
-          <nav className="App__nav">
-            <header className="App__nav__header">
-              <h1>
-                <Link to="/">Goals</Link>
+          <section className="App__board">
+            <div className="App__board__header">
+              <div className="GoalListNav">
+                <Link to="/">
+                  <span className="Title">Goals</span>
+                </Link>
                 <FontAwesomeIcon icon="check-double" />
-              </h1>
-            </header>
+              </div>
+            </div>
             {renderNavRoutes()}
-          </nav>
-          <header className="App__main__header">
-            <h1>
-              <Link to="/">Tasks</Link> <FontAwesomeIcon icon="check-double" />
-            </h1>
-          </header>
-          <main className="App__main">{renderMainRoutes()}</main>
+          </section>
+
+          <section className="App__board">
+            <div className="App__board__header">
+              <div className="GoalListNav">
+                <Link to="/">
+                  <span className="Title">Tasks</span>
+                </Link>
+                <FontAwesomeIcon icon="check-double" />
+              </div>
+            </div>
+            <main className="App__main">{renderMainRoutes()}</main>
+          </section>
         </div>
       </div>
     </ApiContext.Provider>
   );
 }
 
-//     <ApiContext.Provider value={value}>
-//       <div className="App">
-//         <nav className="App__nav">{renderNavRoutes()}</nav>
-//         <header className="App__header">
-//           <h1>
-//             <Link to="/">Achiever</Link> <FontAwesomeIcon icon="check-double" />
-//           </h1>
-//         </header>
-//         <main className="App__main">{renderMainRoutes()}</main>
-//       </div>
-//     </ApiContext.Provider>
-//   );
-// }
-
 function renderNavRoutes() {
   return (
     <>
       {["/", "/goal/:goalId"].map((path) => (
-        <Route exact key={path} path={path} component={TaskListNav} />
+        <Route exact key={path} path={path} component={GoalListNav} />
       ))}
       <Route path="/task/:taskId" component={TaskPageNav} />
       <Route path="/add-goal" component={TaskPageNav} />

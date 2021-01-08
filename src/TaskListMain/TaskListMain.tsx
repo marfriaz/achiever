@@ -19,31 +19,30 @@ export default function TaskListMain() {
   const handleDeleteTask = (taskId: number) => {};
 
   return (
-    <section className="TaskListMain">
-      <ul>
+    <section className="GoalListNav">
+      <div className="GoalListNav__list">
         {tasksForGoal!.map((task) => (
-          <li key={task.id}>
-            <Task
-              id={task.id}
-              name={task.name}
-              modified={task.date_created}
-              onDeleteTask={handleDeleteTask}
-            />
-          </li>
+          <Task
+            id={task.id}
+            name={task.name}
+            details={task.details}
+            modified={task.date_created}
+            onDeleteTask={handleDeleteTask}
+          />
         ))}
-      </ul>
-      <div className="TaskListMain__button-container">
-        <CircleButton
-          tag={Link}
-          to="/add-task"
-          role="link"
-          type="button"
-          className="TaskListMain__add-task-button"
-        >
-          <FontAwesomeIcon icon="plus" />
-          <br />
-          Task
-        </CircleButton>
+        <div className="TaskListMain__button-container">
+          <CircleButton
+            tag={Link}
+            to="/add-task"
+            role="link"
+            type="button"
+            className="TaskListMain__add-task-button"
+          >
+            <FontAwesomeIcon icon="plus" />
+            <br />
+            Task
+          </CircleButton>
+        </div>
       </div>
     </section>
   );

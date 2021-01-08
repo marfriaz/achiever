@@ -1,0 +1,79 @@
+.GoalListNav,
+.App__main__header {
+  display: flex;
+  justify-content: center;
+  background-color: #e5eff5;
+  box-shadow: inset 0px 0px 20px 10px rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  padding: 8px 16px;
+  margin-bottom: 10px;
+
+  /* align-items: center; */
+}
+.Title {
+  font-weight: bold;
+}
+
+.GoalListNav__list {
+  list-style-type: none;
+  padding: 2% 8% 2% 8%;
+  display: grid;
+  column-gap: 1em;
+  row-gap: 1em;
+
+  grid-template-columns: repeat(3, 2fr);
+  /* grid-template-rows: repeat(20, 1fr); */
+  max-width: 100%;
+}
+
+.Goal__card {
+  /* padding: 25px; */
+  /* width: 20%; */
+  text-align: center;
+  background-color: white;
+  border-radius: 1rem;
+}
+
+.Goal__card a {
+  color: black;
+}
+
+.GoalListNav__goal-link {
+  /* background-color: white; */
+  /* box-shadow: inset 0px 0px 20px 10px rgba(255, 255, 255, 0.1); */
+  /* color: #b5b3b3; */
+  display: block;
+  font-family: var(--custom-font);
+  font-size: 20px;
+  margin: 0 0 8px auto;
+  max-width: 180px;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+.GoalListNav__goal-link:hover {
+  color: #3bba9c;
+  cursor: pointer;
+}
+.Goal__card:active {
+  background: linear-gradient(#3eb9de, #3a80de);
+}
+
+.GoalListNav__num-tasks {
+  color: #adadad;
+  display: block;
+  float: right;
+  font-size: 10px;
+}
+
+.GoalListNav__button-wrapper {
+  /* margin: 0 0 0 auto; */
+  max-width: 180px;
+}
+
+.GoalListNav__add-goal-button {
+  margin: 20px auto;
+}
+.GoalListNav__add-goal-button:hover {
+  background: linear-gradient(#3eb9de, #3a80de);
+  color: white;
+}

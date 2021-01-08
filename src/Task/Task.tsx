@@ -9,10 +9,17 @@ import "./Task.css";
 interface TaskProps {
   name: string;
   id: number;
+  details: string;
   modified?: string;
   onDeleteTask: (taskId: number) => void | null;
 }
-export default function Task({ name, id, modified, onDeleteTask }: TaskProps) {
+export default function Task({
+  name,
+  id,
+  details,
+  modified,
+  onDeleteTask,
+}: TaskProps) {
   const { deleteTask } = useContext(ApiContext)!;
 
   const handleClickDelete = (e: React.MouseEvent) => {
@@ -38,10 +45,22 @@ export default function Task({ name, id, modified, onDeleteTask }: TaskProps) {
   };
 
   return (
-    <div className="Task">
+    <div className="Task__card">
       <h2 className="Task__title">
         <Link to={`/task/${id}`}>{name}</Link>
       </h2>
+
+      <div className="TaskPageMain__content">
+        {details.split(/\n \r|\n/).map((para: any, i: any) => (
+          <p key={i}>{para}</p>
+        ))}
+      </div>
+      <div className="Task__dates">
+        <div className="Task__dates-modified">
+          Created{" "}
+          <span className="Date">{format(modified!, "Do MMM YYYY")}</span>
+        </div>
+      </div>
       <button
         className="Task__delete"
         type="button"
@@ -49,12 +68,6 @@ export default function Task({ name, id, modified, onDeleteTask }: TaskProps) {
       >
         <FontAwesomeIcon icon="trash-alt" /> remove
       </button>
-      <div className="Task__dates">
-        <div className="Task__dates-modified">
-          Created{" "}
-          <span className="Date">{format(modified!, "Do MMM YYYY")}</span>
-        </div>
-      </div>
     </div>
   );
 }

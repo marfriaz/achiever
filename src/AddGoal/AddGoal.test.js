@@ -1,6 +1,6 @@
 import React from "react";
-import { shallow } from "enzyme";
-import toJson from "enzyme-to-json";
+import { shallow } from "../GoalListNav/node_modules/enzyme";
+import toJson from "../GoalListNav/node_modules/enzyme-to-json";
 import AddGoal from "./AddGoal";
 
 describe(`AddItemForm component`, () => {

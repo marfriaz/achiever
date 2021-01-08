@@ -2,12 +2,13 @@
   --custom-font: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
     "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
-  background: radial-gradient(
+  /* background: radial-gradient(
     circle,
     rgba(67, 69, 92, 1) 0%,
     rgba(46, 48, 71, 1) 47%,
     rgba(67, 69, 92, 1) 77%
-  );
+  ); */
+  background: linear-gradient(#3eb9de, #3a80de);
 }
 
 .App__header {
@@ -17,7 +18,6 @@
   color: #bdbdbd;
   font-family: var(--custom-font);
   padding-top: 32px;
-  text-shadow: 2px 1px 2px black;
   padding-bottom: 32px;
 }
 
@@ -27,47 +27,43 @@
   margin-right: 10%;
 }
 
+.App__body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* .App__board {
+  overflow: auto;
+} */
+
 .App__main__header {
   /* background-color: #0b1f3a; */
   color: #bdbdbd;
   font-family: var(--custom-font);
   grid-area: header;
   padding-left: 16px;
-  padding-top: 32px;
-  text-shadow: 2px 1px 2px black;
+  /* padding-top: 32px; */
 }
-
-.App__body {
-  display: grid;
-  grid-template-areas: "sidebar header" "sidebar main";
-  grid-template-columns: 1fr 2.3fr;
-  grid-template-rows: 120px 1fr;
-  min-height: 100vh;
-}
-
-.App__nav {
-  /* background-color: #0b1b32; */
-  color: #fff;
-  grid-area: sidebar;
-  height: 100vh;
-  overflow: auto;
-}
-
-.App__nav__header {
+.App__board__header {
+  display: flex;
+  justify-content: flex-start;
   color: #bdbdbd;
   font-family: var(--custom-font);
   font-size: 1.3em;
-  grid-area: header;
   text-align: center;
   padding-left: 16px;
-  padding-top: 32px;
-  text-shadow: 2px 1px 2px black;
+  /* padding-top: 32px; */
 }
 
 .App__header a,
 .App__main__header a,
-.App__nav__header a {
-  color: #3bba9c;
+.App__board__header a {
+  /* color: #3bba9c; */
+  color: black;
+  text-decoration: none;
 }
 
 .App__main {
