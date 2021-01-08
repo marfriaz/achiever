@@ -51,7 +51,7 @@ export default function Task({ name, id, modified, onDeleteTask }: TaskProps) {
       </button>
       <div className="Task__dates">
         <div className="Task__dates-modified">
-          Modified{" "}
+          Created{" "}
           <span className="Date">{format(modified!, "Do MMM YYYY")}</span>
         </div>
       </div>
