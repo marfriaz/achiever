@@ -2,9 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Route, Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import GoalListNav from "../GoalListNav/GoalListNav";
-import TaskPageNav from "../TaskPageNav/TaskPageNav";
 import TaskListMain from "../TaskListMain/TaskListMain";
-import TaskPageMain from "../TaskPageMain/TaskPageMain";
 import AddGoal from "../AddGoal/AddGoal";
 import AddTask from "../AddTask/AddTask";
 import ApiContext from "../ApiContext";
@@ -106,7 +104,7 @@ export default function App() {
           </div>
         </header>
         <div className="App__body">
-          <section className="App__board">
+          <section className="App__board_1">
             <div className="App__board__header">
               <div className="GoalListNav">
                 <Link to="/">
@@ -141,9 +139,6 @@ function renderNavRoutes() {
       {["/", "/goal/:goalId"].map((path) => (
         <Route exact key={path} path={path} component={GoalListNav} />
       ))}
-      <Route path="/task/:taskId" component={TaskPageNav} />
-      <Route path="/add-goal" component={TaskPageNav} />
-      <Route path="/add-task" component={TaskPageNav} />
     </>
   );
 }
@@ -154,7 +149,6 @@ function renderMainRoutes() {
       {["/", "/goal/:goalId"].map((path) => (
         <Route exact key={path} path={path} component={TaskListMain} />
       ))}
-      <Route path="/task/:taskId" component={TaskPageMain} />
       <Route path="/add-goal" component={AddGoal} />
       <Route path="/add-task" component={AddTask} />
     </>

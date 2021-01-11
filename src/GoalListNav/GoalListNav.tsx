@@ -15,14 +15,14 @@ export default function GoalListNav() {
         return null;
       } else {
         return goals!.map((goal: any) => (
-          <div className="Goal__card" key={goal.id}>
-            <NavLink className="GoalListNav__goal-link" to={`/goal/${goal.id}`}>
+          <NavLink className="GoalListNav__goal-link" to={`/goal/${goal.id}`}>
+            <div className="Goal__card" key={goal.id}>
               <span className="GoalListNav__num-tasks">
                 {countTasksForGoal(tasks, goal.id)}
               </span>
               {goal.name}
-            </NavLink>
-          </div>
+            </div>
+          </NavLink>
         ));
       }
     }

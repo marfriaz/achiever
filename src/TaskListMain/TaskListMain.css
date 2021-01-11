@@ -1,3 +1,20 @@
+.TaskListMain__list {
+  list-style-type: none;
+  padding: 2% 8% 2% 8%;
+  display: grid;
+  column-gap: 1em;
+  row-gap: 1em;
+
+  grid-template-columns: repeat(3, 2fr);
+  /* grid-template-rows: repeat(20, 1fr); */
+  max-width: 100%;
+}
+
+.Column__names {
+  display: flex;
+  justify-content: space-evenly;
+}
+
 .TaskListMain ul {
   list-style-type: none;
   margin: 0;

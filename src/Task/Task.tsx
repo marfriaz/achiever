@@ -45,11 +45,8 @@ export default function Task({
   };
 
   return (
-    <div className="Task__card">
-      <h2 className="Task__title">
-        <Link to={`/task/${id}`}>{name}</Link>
-      </h2>
-
+    <div className={["Task__card", details].join(" ")}>
+      {name}
       <div className="TaskPageMain__content">
         {details.split(/\n \r|\n/).map((para: any, i: any) => (
           <p key={i}>{para}</p>

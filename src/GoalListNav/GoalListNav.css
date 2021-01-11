@@ -21,24 +21,22 @@
   column-gap: 1em;
   row-gap: 1em;
 
-  grid-template-columns: repeat(3, 2fr);
+  grid-template-columns: repeat(1, 2fr);
   /* grid-template-rows: repeat(20, 1fr); */
   max-width: 100%;
 }
 
-.Goal__card {
+.GoalListNav__goal-link {
   /* padding: 25px; */
   /* width: 20%; */
   text-align: center;
   background-color: white;
   border-radius: 1rem;
-}
-
-.Goal__card a {
+  text-decoration: none;
   color: black;
 }
 
-.GoalListNav__goal-link {
+.Goal__card {
   /* background-color: white; */
   /* box-shadow: inset 0px 0px 20px 10px rgba(255, 255, 255, 0.1); */
   /* color: #b5b3b3; */
@@ -54,7 +52,7 @@
   color: #3bba9c;
   cursor: pointer;
 }
-.Goal__card:active {
+.GoalListNav__goal-link.active {
   background: linear-gradient(#3eb9de, #3a80de);
 }
 

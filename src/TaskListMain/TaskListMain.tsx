@@ -20,7 +20,12 @@ export default function TaskListMain() {
 
   return (
     <section className="GoalListNav">
-      <div className="GoalListNav__list">
+      {/* <div className="Column__names">
+        <div>To Do</div>
+        <div>Doing</div>
+        <div>Done</div>
+      </div> */}
+      <div className="TaskListMain__list">
         {tasksForGoal!.map((task) => (
           <Task
             id={task.id}
