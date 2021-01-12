@@ -54,7 +54,7 @@ export default function Task({
       </div>
       <div className="Task__dates">
         <div className="Task__dates-modified">
-          Created{" "}
+          Created
           <span className="Date">{format(modified!, "Do MMM YYYY")}</span>
         </div>
       </div>

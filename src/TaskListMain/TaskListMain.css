@@ -1,3 +1,19 @@
+.TaskListMain {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #e5eff5;
+  box-shadow: inset 0px 0px 20px 10px rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  padding: 8px 16px;
+  margin-bottom: 10px;
+
+  /* align-items: center; */
+}
+.Column__names {
+  font-size: 20px;
+  font-weight: bold;
+}
 .TaskListMain__list {
   list-style-type: none;
   padding: 2% 8% 2% 8%;

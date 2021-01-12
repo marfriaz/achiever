@@ -19,12 +19,12 @@ export default function TaskListMain() {
   const handleDeleteTask = (taskId: number) => {};
 
   return (
-    <section className="GoalListNav">
-      {/* <div className="Column__names">
+    <section className="TaskListMain">
+      <div className="Column__names">
         <div>To Do</div>
         <div>Doing</div>
         <div>Done</div>
-      </div> */}
+      </div>
       <div className="TaskListMain__list">
         {tasksForGoal!.map((task) => (
           <Task
